@@ -1,41 +1,236 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f9f9f9;
+    color: #111;
   }
-  to {
-    transform: rotate(360deg);
+  
+  a {
+    text-decoration: none;
+    color: #0066cc;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  
+  button {
+    font-size: 16px;
+    padding: 0.4em 1em;
+    margin-top: 1em;
+    background-color: #007aff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
   }
-}
+  
+  button:hover {
+    background-color: #005bb5;
+  }
+  
+  h1, h2 {
+    font-weight: 500;
+    margin: 1em 0 0.5em;
+  }
+  
+  /* Layout Containers */
+  .container {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  }
+  
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .back-link {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Contact List */
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+  }
+  
+  li {
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    transition: background-color 0.2s ease;
+  }
+  
+  li:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Contact Detail */
+  .contact h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-info {
+    margin: 1rem 0;
+  }
+  
+  .contact-info h4 {
+    margin: 0.5rem 0 0.25rem;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .contact-info a, .contact-info p {
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+  /* Forms */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  input {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Form Layout for Add/Edit */
+  form .form-row {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  form .form-row > div {
+    flex: 1;
+  }
+  
+  .cancel-btn {
+    background: none;
+    color: #666;
+    border: none;
+    margin-left: 1rem;
+    cursor: pointer;
+  }
+  
+  /* Floating Add Button */
+  .add-btn {
+    position: relative;
+    font-size: 36px;
+    background: none;
+    color: #007aff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Search Input */
+  .search {
+    padding: 0.75rem;
+    font-size: 1rem;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 1rem;
+  }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
+  /* Container for the whole contact detail page */
+.container {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  
+  /* Top navigation: back and edit buttons */
+  .container > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .container button,
+  .container a {
+    background-color: transparent;
+    border: none;
+    color: #007aff;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .container button:hover,
+  .container a:hover {
+    background-color: #f0f0f5;
+  }
+  
+  /* Contact name */
+  .container h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  /* Contact info fields */
+  .container div > div {
+    margin-bottom: 1rem;
+    font-size: 16px;
+    color: #444;
+  }
+  
+  .container strong {
+    font-weight: 500;
+    margin-right: 4px;
+  }
+  
+  /* Email link */
+  .container a[href^="mailto:"] {
+    color: #007aff;
+    text-decoration: none;
+  }
+  
+  .container a[href^="mailto:"]:hover {
+    text-decoration: underline;
+  }
+  
+  /* Delete button */
+  .del-btn {
+    display: block;
+    padding: 10px 16px;
+    background-color: #ff3b30;
+    color: white;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .del-btn:hover {
+    background-color: #e53935;
+  }
+  
